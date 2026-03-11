@@ -2,26 +2,46 @@
 <html lang="zh-Hant">
 <head>
     <meta charset="UTF-8">
-    <title>作業五：內嵌框架練習</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>作業三：學生資料表</title>
     <style>
-        iframe {
-         
-            width: 500px;
-            
-            height: 500px;
-           
-            border: none;
+     
+        table {
+            border-collapse: collapse;
+            width: 300px; 
+
+      
+        table, th, td {
+            border: 1px solid black;
+        }
+
+       
+        th, td {
+            padding: 5px;
+            text-align: left;
+        }
+
+       
+        th {
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
 
-    <h2>我的內嵌網頁</h2>
-
-    <iframe src="https://www.w3schools.com"></iframe>
-
-</body>
-</html>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Student ID</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>賴昱豪</td>
+                <td>113403029</td>
+            </tr>
+        </tbody>
     </table>
 
 </body>
