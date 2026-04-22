@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Button Demo</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    margin: 0;
+  }
+
+  /* 左側列表 */
+  .sidebar {
+    width: 220px;
+    padding: 10px;
+    border-right: 1px solid #ccc;
+  }
+
+  .item {
+    height: 20px;
+    background-color: #90ee90;
+    margin-bottom: 6px;
+  }
+
+  /* 右側內容 */
+  .content {
+    flex: 1;
+    padding: 20px;
+  }
+
+  .image-box {
+    width: 500px;
+    height: 250px;
+    background-color: #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* 按鈕樣式（依照圖） */
+  .btn {
+    margin-top: 10px;
+    height: 22px;
+    padding: 0 12px;
+    border-radius: 8px;
+    border: 1px solid #222;
+    background-color: #fff;
+    font-size: 13px;
+    cursor: pointer;
+  }
+
+  .btn:hover {
+    background-color: #f0f0f0;
+  }
+
+  /* 詳細資訊區 */
+  .details {
+    margin-top: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    display: none;
+  }
+</style>
+</head>
+<body>
+
+<!-- 左側（模擬圖片清單） -->
+<div class="sidebar">
+  <div class="item"></div>
+  <div class="item"></div>
+  <div class="item"></div>
+  <div class="item"></div>
+  <div class="item"></div>
+</div>
+
+<!-- 右側 -->
+<div class="content">
+  <div class="image-box">
+    <span>Image Placeholder</span>
+  </div>
+
+  <button class="btn" onclick="toggleDetails()">
+    查看詳細資訊
+  </button>
+
+  <div class="details" id="details">
+    <p><strong>Title:</strong> Sunset View</p>
+    <p><strong>Description:</strong> A beautiful sunset over the lake.</p>
+    <p><strong>Size:</strong> 496 x 240</p>
+  </div>
+</div>
+
+<script>
+  function toggleDetails() {
+    const detail = document.getElementById("details");
+    if (detail.style.display === "none") {
+      detail.style.display = "block";
+    } else {
+      detail.style.display = "none";
+    }
+  }
+</script>
+
+</body>
+</html>
