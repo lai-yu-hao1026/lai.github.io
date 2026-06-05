@@ -167,7 +167,8 @@ header {
   border: none; cursor: pointer;
   padding: 15px 44px;
   font-weight: 700;
-  clip-path: polygon(10px 0%, 100% 0%, calc(100% - 10px) 100%, 0% 100%);
+  border-radius: 2px;
+  position: relative; z-index: 10;
   transition: transform 0.2s, box-shadow 0.2s, background 1.5s;
   opacity: 0; animation: rise 1s 0.55s var(--ease) forwards;
 }
@@ -176,9 +177,10 @@ header {
   box-shadow: 0 12px 40px var(--accent-glow);
 }
 .hero-data {
-  position: absolute; bottom: 36px;
   display: flex; gap: 52px;
   opacity: 0; animation: rise 1s 0.7s var(--ease) forwards;
+  margin-top: 48px;
+  position: relative;
 }
 .hero-datum { text-align: center; }
 .hero-datum-n {
